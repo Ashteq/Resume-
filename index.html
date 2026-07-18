@@ -559,7 +559,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 480px;
+            min-height: 420px;
             transition: var(--transition-smooth);
         }
 
@@ -627,7 +627,6 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 36px;
         }
 
         .tech-badge {
@@ -643,22 +642,6 @@
         [data-theme="dark"] .tech-badge {
             background-color: rgba(255, 255, 255, 0.05);
             color: var(--dark-burgundy);
-        }
-
-        .project-link {
-            align-self: flex-start;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--primary-burgundy);
-            border-bottom: 1px solid transparent;
-            padding-bottom: 2px;
-        }
-
-        .project-link:hover {
-            border-bottom-color: var(--primary-burgundy);
         }
 
         /* Timelines (Leadership & Experience) */
@@ -871,20 +854,25 @@
 
         /* Contact Section */
         .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 80px;
+            display: flex;
+            justify-content: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .contact-info-panel {
             display: flex;
             flex-direction: column;
             gap: 40px;
+            align-items: center;
+            text-align: center;
+            width: 100%;
         }
 
         .contact-meta-item {
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         .meta-label {
@@ -900,49 +888,6 @@
             font-size: 1.3rem;
             font-weight: 500;
             color: var(--text-color);
-        }
-
-        .contact-form-container {
-            background-color: rgba(255, 255, 255, 0.4);
-            border: 1px solid var(--border-color);
-            padding: 48px;
-            border-radius: 24px;
-        }
-
-        [data-theme="dark"] .contact-form-container {
-            background-color: rgba(255, 255, 255, 0.02);
-        }
-
-        .form-row {
-            margin-bottom: 28px;
-        }
-
-        .form-row label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .form-row input,
-        .form-row textarea {
-            width: 100%;
-            background-color: transparent;
-            border: none;
-            border-bottom: 1px solid var(--border-color);
-            padding: 12px 0;
-            font-family: 'Manrope', sans-serif;
-            font-size: 1rem;
-            color: var(--text-color);
-            outline: none;
-            transition: var(--transition-fast);
-        }
-
-        .form-row input:focus,
-        .form-row textarea:focus {
-            border-bottom-color: var(--primary-burgundy);
         }
 
         /* Footer */
@@ -1033,7 +978,6 @@
             .about-right { padding: 24px; }
             .project-card, .service-card { padding: 32px; }
             .resume-card { padding: 40px 24px; }
-            .contact-form-container { padding: 32px; }
             .footer-bottom { flex-direction: column; gap: 20px; }
         }
     </style>
@@ -1193,10 +1137,6 @@
                         <span class="tech-badge">Plotly</span>
                         <span class="tech-badge">Predictive Modeling</span>
                     </div>
-                    <a href="https://github.com" target="_blank" rel="noopener" class="project-link">
-                        View Repository 
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
                 </div>
             </div>
 
@@ -1220,10 +1160,6 @@
                         <span class="tech-badge">SciPy</span>
                         <span class="tech-badge">Data Science</span>
                     </div>
-                    <a href="https://github.com" target="_blank" rel="noopener" class="project-link">
-                        View Repository 
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
                 </div>
             </div>
 
@@ -1246,10 +1182,6 @@
                         <span class="tech-badge">Python</span>
                         <span class="tech-badge">Cryptography</span>
                     </div>
-                    <a href="https://github.com" target="_blank" rel="noopener" class="project-link">
-                        View Repository 
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
                 </div>
             </div>
 
@@ -1272,10 +1204,6 @@
                         <span class="tech-badge">Computer Vision</span>
                         <span class="tech-badge">Matplotlib</span>
                     </div>
-                    <a href="https://github.com" target="_blank" rel="noopener" class="project-link">
-                        View Repository 
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
                 </div>
             </div>
 
@@ -1298,36 +1226,6 @@
                         <span class="tech-badge">Signal Processing</span>
                         <span class="tech-badge">C++</span>
                     </div>
-                    <a href="https://github.com" target="_blank" rel="noopener" class="project-link">
-                        View Repository 
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Project 6 -->
-            <div class="project-card">
-                <div class="project-top">
-                    <h3>Quantum Finance Explorations</h3>
-                    <p class="project-desc">A deep theoretical investigation applying mathematical quantum walk models to asset pricing simulation frameworks.</p>
-                    <div class="project-contrib">
-                        <div class="contrib-title">Key Contributions</div>
-                        <ul>
-                            <li>Modeled stochastic distribution arrays comparing classical vs quantum tracks.</li>
-                            <li>Authored extensive structural research analysis summaries.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="project-bottom">
-                    <div class="project-tech">
-                        <span class="tech-badge">Quantum Mechanics</span>
-                        <span class="tech-badge">Stochastic Calculus</span>
-                        <span class="tech-badge">LaTeX</span>
-                    </div>
-                    <a href="https://github.com" target="_blank" rel="noopener" class="project-link">
-                        View Repository 
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
                 </div>
             </div>
         </div>
@@ -1497,7 +1395,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="reveal reveal-fade-up">
-        <div class="section-header">
+        <div class="section-header" style="margin-left: auto; margin-right: auto; text-align: center;">
             <span class="section-tag">Initiate Connection</span>
             <h2 class="section-title">Let's build something systemic together.</h2>
         </div>
@@ -1505,11 +1403,11 @@
             <div class="contact-info-panel">
                 <div class="contact-meta-item">
                     <span class="meta-label">Primary Email</span>
-                    <a href="mailto:akanksha.sharma@example.com" class="meta-value">akanksha.sharma@example.com</a>
+                    <a href="mailto:ashteq.in@gmail.com" class="meta-value">ashteq.in@gmail.com</a>
                 </div>
                 <div class="contact-meta-item">
                     <span class="meta-label">Professional Networks</span>
-                    <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 8px;">
+                    <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 8px; align-items: center;">
                         <a href="https://linkedin.com" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 500;">
                             LinkedIn 
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
@@ -1524,23 +1422,6 @@
                     <span class="meta-label">Base Location</span>
                     <span class="meta-value">India / Available for Global Remote Tracks</span>
                 </div>
-            </div>
-            <div class="contact-form-container">
-                <form id="contact-form" onsubmit="event.preventDefault(); alert('Message successfully logged. Thank you!');">
-                    <div class="form-row">
-                        <label for="form-name">Identification / Name</label>
-                        <input type="text" id="form-name" required placeholder="Dr. Julian Vance">
-                    </div>
-                    <div class="form-row">
-                        <label for="form-email">Corporate / Research Email</label>
-                        <input type="email" id="form-email" required placeholder="julian@startup.io">
-                    </div>
-                    <div class="form-row">
-                        <label for="form-message">Scope of Engagement</label>
-                        <textarea id="form-message" rows="4" required placeholder="We are seeking an autonomous systems operator for our YC laboratory deployment..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Transmit Parameters</button>
-                </form>
             </div>
         </div>
     </section>
